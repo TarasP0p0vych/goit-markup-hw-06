@@ -70,6 +70,7 @@
 
 .container {
   min-width: 320px;
+  max-width: 428px;
   margin: 0 auto;
   padding: 0 16px;
 
@@ -865,7 +866,7 @@ textarea {
 }
 @media only screen and (min-width: 1158px) {
   .article-list {
-    column-gap: 48px;
+    row-gap: 48px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -978,11 +979,12 @@ textarea {
 }
 .footer-logo-link {
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 
   text-align: center;
   text-transform: uppercase;
   color: var(--attention-color);
+  font-size: 18px;
 }
 
 .footer-second-word {
