@@ -1,12 +1,17 @@
-/* To do:
-1) Mobile  for all styles
-2) Menu panel
-3) Modal remake 
-4) Media queries for Tabs
-5) Media queries for laptops
-6) Portfolio
-7) Retinisation
- */
+/* REMADE:
+Мобіл:
+1) бекграунд респонсивний 
+2) неправильний падінг в меню (mobile-address-list нижче)
+3) mobile-address забрати падінг
+4) Заголовки і текст відступи
+Планшет:
+5) невірні падінги в хіро
+6) між картками неправильний відступ тім
+7) ширина блоку кастомерс і стилі карток
+8) картки неправильно в планшета
+9) форма в футері маржин + нерівно стоїть
+10) всі блоки у в'юпорт
+*/
 :root {
   /**
     |============================
@@ -90,8 +95,8 @@
   }
 }
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 /* Styles for tags */
@@ -280,6 +285,11 @@ textarea {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .header-address-item:not(:last-child) .header-address {
+    margin-bottom: 12px;
+  }
+}
 /* .header-address-item:not(:last-child) {
   margin-right: 40px;
 } */
@@ -336,22 +346,56 @@ textarea {
 */
 .hero {
   /* max-width: 1440px; */
-  padding: 112px 0px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   margin: 0 auto;
 
   text-align: center;
 
   background-color: var(--dark-navy-color);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/hero-background-photo.jpg);
+    url('../images/hero-background-photo-mobile@1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../images/hero-background-photo-mobile@2x.jpg');
+  }
+}
 @media only screen and (min-width: 768px) {
   .hero {
-    padding: 188px 0px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../images/hero-background-photo-tablet@1x.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../images/hero-background-photo-tablet@2x.jpg');
+    }
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../images/hero-background-photo-desktop@1x.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../images/hero-background-photo-desktop@2x.jpg');
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 112px 136px 204px 136px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -530,7 +574,9 @@ textarea {
   line-height: 1.11;
   text-align: center;
   color: var(--dark-navy-color);
+  margin-bottom: 8px;
 }
+
 @media only screen and (min-width: 768px) {
   .feature-name {
     text-align: left;
@@ -587,6 +633,11 @@ textarea {
   display: flex;
   gap: 24px;
 }
+@media screen and (max-width: 767px) {
+  .team-list {
+    gap: 72px;
+  }
+}
 
 /**
   |============================
@@ -596,85 +647,68 @@ textarea {
 .team {
   background-color: var(--white-cornflower-color);
 }
-/* .team-list {
+.team-list {
   display: flex;
-  gap: 24px;
-} */
-
-@media only screen and (min-width: 768px) {
+}
+@media screen and (max-width: 767.98px) {
   .team-list {
-    display: flex;
+    gap: 72px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-list {
     row-gap: 64px;
-
-    flex-wrap: wrap;
+    column-gap: 24px;
   }
 }
-@media only screen and (min-width: 1158px) {
+@media screen and (max-width: 1157px) {
   .team-list {
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
-.teamcard-container {
-  padding: 32px 0px;
-}
-.team-item {
-  margin: 0 auto;
-  width: 264px;
-
-  background-color: var(--white-color);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-}
-@media only screen and (max-width: 767.98px) {
-  .team-item:not(:last-child) {
-    .team-list-item {
-      width: 264px;
-      margin: 0 auto;
-    }
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .team-item:not(:last-child) {
-    margin-bottom: 72px;
-  }
-}
-
-/* DO NOT CHANGE ITEMS ABOVE!!! */
 .team-name {
   margin-bottom: 8px;
 
+  color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  text-align: center;
   letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
+  text-align: center;
 }
 .team-role {
   font-size: 16px;
-  line-height: 1.5;
   text-align: center;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-  color: var(--primary-text-color);
   margin-bottom: 8px;
 }
 .social-media-list {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 24px;
 }
 .social-media-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
   background-color: var(--attention-color);
+
   transition: background-color var(--main-transition);
+}
+.team-item {
+  /* padding: 32px 16px; */
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+.teamcard-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-radius: 0px 0px 4px 4px;
 }
 .social-media-icon {
   fill: var(--white-cornflower-color);
@@ -703,6 +737,7 @@ textarea {
 } */
 .customers-list {
   display: flex;
+  justify-content: center;
 
   row-gap: 72px;
   column-gap: 16px;
@@ -721,6 +756,7 @@ textarea {
 @media only screen and (min-width: 768px) {
   .customer-list-item {
     flex-basis: calc((100% - 24px * 2) / 3);
+    max-width: 168px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -943,31 +979,33 @@ textarea {
   |============================
 */
 .footer {
-  padding: 96px 0px;
+  padding: 100px 0px;
 
   background-color: var(--dark-navy-color);
   font-family: var(--secondary-font);
 }
-@media only screen and (min-width: 1158px) {
-  .footer {
-    padding: 100px 0;
+@media screen and (min-width: 1158px) {
+  .footer-container {
+    justify-content: center;
   }
 }
 /* .footer-container {
   display: flex;
   align-items: baseline;
 } */
-
-@media only screen and (min-width: 768px) and (max-width: 1157.98px) {
+@media screen and (min-width: 768px) {
   .footer-container {
     display: flex;
-
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .footer-container {
     flex-wrap: wrap;
-    row-gap: 72px;
     column-gap: 24px;
+    row-gap: 72px;
+    max-width: 530px;
 
     align-items: baseline;
-    justify-content: center;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -1201,6 +1239,7 @@ textarea {
   flex-shrink: 0;
   width: 100%;
   height: 100%;
+  opacity: 1;
   background-color: var(--modal-window-bg);
   transition: opacity var(--main-transition), visibility var(--main-transition);
 }
@@ -1238,6 +1277,16 @@ textarea {
 .modal-close-btn:hover .close-modal-icon,
 .modal-close-btn:focus .close-modal-icon {
   fill: var(--white-color);
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 95%;
+    max-width: 392px;
+    height: 95%;
+    max-height: 584px;
+    overflow: scroll;
+    /* width: 392px; */
+  }
 }
 /**
   |============================
@@ -1388,7 +1437,10 @@ textarea {
   justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  padding: 80px 0 75px 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
   background-color: var(--white-color);
   transition: transform var(--main-transition) 150ms;
   transform: translateX(100%);
@@ -1441,9 +1493,6 @@ textarea {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.js-close-menu {
-}
-
 .menu-close-icon {
   fill: var(--dark-navy-color);
   transition: fill var(--main-transition);
@@ -1451,8 +1500,6 @@ textarea {
 .menu-container .menu-toggle:hover .menu-close-icon,
 .menu-container .menu-toggle:focus .menu-close-icon {
   fill: var(--white-color);
-}
-.mobile-nav {
 }
 .mobile-menu {
   width: fit-content;
@@ -1469,8 +1516,6 @@ textarea {
 }
 .mobile-menu-link.active {
   color: var(--pressed-state-color);
-}
-.link {
 }
 
 .mobile-address {
