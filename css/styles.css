@@ -195,7 +195,7 @@ textarea {
 }
 @media only screen and (min-width: 1158px) {
   .header .link {
-    padding: 24px 0;
+    padding: 24px 0px;
   }
 }
 .header-nav {
@@ -239,13 +239,12 @@ textarea {
 .header-nav-link {
   position: relative;
   font-weight: 500;
-
-  /* padding-top: 24px;
+  padding-top: 24px;
   padding-bottom: 24px;
-  display: block; 
+  display: block;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em; */
+  letter-spacing: 0.02em;
 
   color: var(--dark-navy-color);
   transition: color var(--main-transition);
