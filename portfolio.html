@@ -60,12 +60,21 @@
             </li>
           </ul>
         </address>
+        <button
+          class="menu-toggle js-open-menu btn"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <svg class="menu-toggle-icon" width="32" height="22">
+            <use href="./images/icons.svg#burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- MAIN -->
     <main>
       <!-- PORTFOLIO -->
-      <section class="filter-section section">
+      <section class="portfolio section">
         <div class="container">
           <h1 class="visually-hidden">Portfilio</h1>
           <!-- FILTER -->
@@ -363,5 +372,100 @@
         </div>
       </div>
     </footer>
+    <!-- MOBILE SIDEBAR MENU -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu btn">
+        <svg class="menu-close-icon" width="8" height="8">
+          <use href="./images/icons.svg#menu-close"></use>
+        </svg>
+      </button>
+      <nav class="mobile-nav">
+        <ul class="mobile-menu list">
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link link" href="./index.html">Studio</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link active link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-socials-container">
+        <address class="mobile-address">
+          <ul class="mobile-address-list list">
+            <li class="mobile-address-item"
+              ><a class="mobile-address-link link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              ></li
+            >
+            <li class="mobile-address-item">
+              <a class="mobile-address-link link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              ></li
+            >
+          </ul>
+        </address>
+        <ul class="mobile-socials-list list">
+          <li class="mobile-socials-item">
+            <a
+              class="mobile-socials-link link"
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="mobile-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-socials-item">
+            <a
+              class="mobile-socials-link link"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="mobile-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-socials-item">
+            <a
+              class="mobile-socials-link link"
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="mobile-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-socials-item">
+            <a
+              class="mobile-socials-link link"
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="mobile-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- JS scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      defer
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js" defer></script>
   </body>
 </html>
