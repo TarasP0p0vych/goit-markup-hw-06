@@ -556,7 +556,8 @@ textarea {
 @media only screen and (min-width: 1158px) {
   .feature-icon-thumb {
     display: flex;
-
+    justify-content: center;
+    align-items: center;
     width: 264px;
     height: 112px;
     background-color: var(--white-cornflower-color);
