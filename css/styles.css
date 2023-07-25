@@ -286,7 +286,7 @@ textarea {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1157.98px) {
-  .header-address-item:not(:last-child) .header-address {
+  .header-address-item:not(:last-child) {
     margin-bottom: 12px;
   }
 }
@@ -346,11 +346,14 @@ textarea {
 */
 .hero {
   /* max-width: 1440px; */
+  padding-top: 188px;
+  padding-bottom: 188px;
   padding-top: 112px;
   padding-bottom: 112px;
   margin: 0 auto;
-
+  background-size: cover;
   text-align: center;
+  background-repeat: no-repeat;
 
   background-color: var(--dark-navy-color);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -395,12 +398,17 @@ textarea {
 }
 @media only screen and (min-width: 768px) {
   .hero {
-    padding: 112px 136px 204px 136px;
+    padding: 112px 0;
+    max-width: 768px;
+    height: 432px;
   }
 }
 @media only screen and (min-width: 1158px) {
   .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
     max-width: 1440px;
+    height: 600px;
   }
 }
 
@@ -408,8 +416,8 @@ textarea {
   /* margin: 0 auto 48px auto;
   max-width: 496px; */
 
-  margin: 0 auto 72px auto;
-  max-width: 320px;
+  margin: 0 auto 48px auto;
+  max-width: 496px;
 
   font-weight: 700;
   font-size: 36px;
@@ -421,10 +429,9 @@ textarea {
 
 @media only screen and (min-width: 768px) {
   .hero-title {
-    max-width: 496px;
     margin-bottom: 36px;
     font-size: 56px;
-    line-height: 1.07;
+    line-height: 1.11;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -642,7 +649,11 @@ textarea {
 /**
   |============================
   | TEAM
-  |============================
+team-
+element.style {
+}
+@media screen and (min-width: 768px)
+.team-card   |============================
 */
 .team {
   background-color: var(--white-cornflower-color);
@@ -666,6 +677,9 @@ textarea {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+.team-card {
+  background-color: var(--white-color);
 }
 .team-name {
   margin-bottom: 8px;
@@ -1123,20 +1137,21 @@ textarea {
     text-align: left;
   }
 }
-/* .subscribe-form {
+.subscribe-form {
   display: flex;
+  flex-direction: column;
   gap: 24px;
-} */
+}
 
 @media only screen and (min-width: 768px) {
   .subscribe-form {
     display: flex;
+    flex-direction: row;
     gap: 24px;
   }
 }
 .subscribe-input {
   padding: 0 16px;
-  margin-bottom: 16px;
   width: 264px;
   height: 40px;
 
@@ -1153,6 +1168,7 @@ textarea {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   transition: border-color var(--main-transition);
 }
+
 @media only screen and (max-width: 767.98px) {
   .subscribe-input {
     width: 100%;
